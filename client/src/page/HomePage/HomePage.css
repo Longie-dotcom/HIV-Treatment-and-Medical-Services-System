@@ -1,0 +1,50 @@
+.home-page {
+  position: relative;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Hide scrollbar if desired */
+.home-page::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fixed background that stays while content scrolls */
+.home-page .background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* cover full screen */
+  background-image: url('../../uploads/home-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  z-index: -1;
+}
+
+/* Content scrolls above the background */
+.home-page .content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  min-height: 200vh; /* enough height to make scrolling visible */
+}
+
+/* Greeting layout */
+.home-page .content .greeting {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-page .content .greeting .greeting-word,
+.home-page .content .greeting .greeting-logo {
+  height: 50vh;
+  width: 40%;
+  margin: 5%;
+  padding: 5%;
+}
+
+.home-page .content .greeting .greeting-logo img {
+  height: 50vh;
+  width: auto;
+}
